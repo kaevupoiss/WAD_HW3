@@ -1,14 +1,44 @@
 <template>
   <div class="home">
-    <h1>Hello World!</h1>
-    <router-link to="/contact">Contact us</router-link>
+    <Header />
+    <div class="posts-container">
+      <Post v-for="index in 10" :key="index" />
+    </div>
+    <Footer />
   </div>
 </template>
 
 <script>
+import Header from "@/components/Header.vue";
+import Footer from "../components/Footer.vue";
+import Post from "../components/Post.vue";
+
 export default {
   name: "Home",
+  components: { Header, Footer, Post },
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.home {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: $grey50;
+}
+
+.posts-container {
+  padding: 2rem 0;
+
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 1.5rem;
+
+  width: 100%;
+  height: 100%;
+  max-width: 50rem;
+}
+</style>
