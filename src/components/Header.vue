@@ -49,12 +49,6 @@ export default {
   }
 
   .logo {
-    cursor: pointer;
-    font-size: 2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: $blue500;
     margin-right: auto;
   }
 }
