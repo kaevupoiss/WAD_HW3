@@ -6,6 +6,7 @@
       <span class="post-time">11 Nov 2021, 18:42</span>
     </div>
     <div class="post-content">
+      <img class="image" alt="pixel 6" src="@/assets/image.jpg" />
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto
         alias ipsa eligendi voluptate eos suscipit voluptatum laborum aperiam?
@@ -64,6 +65,15 @@ export default {
 }
 
 .post-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+
+  .image {
+    border-radius: 1rem;
+    width: 100%;
+  }
+
   p {
     line-height: 150%;
   }
