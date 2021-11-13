@@ -31,10 +31,8 @@ export default {
   components: { Avatar },
   computed: {
     getInitials() {
-      let initials = "";
       let names = this.post.poster.split(" ");
-      initials = names[0][0] + names[names.length - 1][0];
-      return initials;
+      return names[0][0] + names[names.length - 1][0];
     },
   },
 };
