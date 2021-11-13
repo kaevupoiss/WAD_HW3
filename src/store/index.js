@@ -19,7 +19,7 @@ export default new Vuex.Store({
         text: "Which weighs more, a pound of feathers or a pound of bricks?",
       },
       {
-        poster: "Rasmus Talioja",
+        poster: "Märten Kahu",
         time: "Sept 18, 2020 15:16",
         image: "geralt.jpg",
         text: "Felt cute",
@@ -31,19 +31,19 @@ export default new Vuex.Store({
         text: "Guy across the road forgot to trim his garbage, what a mess",
       },
       {
-        poster: "Rasmus Talioja",
+        poster: "Mart-Mihkel Aun",
         time: "Oct 16, 2020 15:11",
         image: "triangel.jpg",
         text: "I'm not sure you can apply Pythagorean on that triangle",
       },
       {
-        poster: "Rasmus Talioja",
+        poster: "Märten Kahu",
         time: "Oct 13, 2020 12:25",
         image: "nopic.png",
         text: "You don't look okay",
       },
       {
-        poster: "Rasmus Talioja",
+        poster: "Jaanus Albert Joosep Külatee Jobu",
         time: "Oct 13, 2020 10:21",
         image: "magi.jpg",
         text: "Would you?",
@@ -55,7 +55,7 @@ export default new Vuex.Store({
         text: "Road works ahead? I sure hope it does",
       },
       {
-        poster: "Rasmus Talioja",
+        poster: "Mart-Mihkel Aun",
         time: "Nov 24, 2020 19:26",
         image: "nopic.png",
         text: "Men invented arm wrestling so they could hold hands and look eachother in the eyes",
