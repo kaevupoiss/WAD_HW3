@@ -2,7 +2,7 @@
   <div class="home">
     <Header />
     <div class="posts-container">
-      <Post v-for="index in 10" :key="index" />
+      <Post v-for="post in posts" :key="post" :post="post" />
     </div>
     <Footer />
   </div>
@@ -10,12 +10,17 @@
 
 <script>
 import Header from "@/components/Header.vue";
-import Footer from "../components/Footer.vue";
-import Post from "../components/Post.vue";
+import Footer from "@/components/Footer.vue";
+import Post from "@/components/Post.vue";
 
 export default {
   name: "Home",
   components: { Header, Footer, Post },
+  computed: {
+    posts() {
+      return this.$store.state.posts;
+    },
+  },
 };
 </script>
 
