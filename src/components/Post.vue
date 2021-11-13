@@ -7,6 +7,7 @@
     </div>
     <div class="post-content">
       <img
+        v-if="post.image"
         class="image"
         alt="pixel 6"
         :src="require('@/assets/' + post.image)"
