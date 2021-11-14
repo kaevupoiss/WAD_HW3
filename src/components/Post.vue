@@ -2,7 +2,7 @@
   <div class="post">
     <div class="post-header">
       <Avatar :initials="getInitials" :size="32" />
-      <span class="post-creator">{{ post.poster }}</span>
+      <span class="post-creator">{{ post.creator }}</span>
       <span class="post-time">{{ post.time }}</span>
     </div>
     <div class="post-content">
@@ -15,14 +15,14 @@
       <p>{{ post.text }}</p>
     </div>
     <div class="post-footer">
-      <span class="material-icons">favorite</span>
-      <span class="like-count">25</span>
+      <span class="material-icons" @click="post.likes++">favorite</span>
+      <span class="like-count">{{ post.likes }}</span>
     </div>
   </div>
 </template>
 
 <script>
-import Avatar from "./Avatar.vue";
+import Avatar from "@/components/Avatar.vue";
 
 export default {
   name: "Post",
@@ -32,7 +32,7 @@ export default {
   components: { Avatar },
   computed: {
     getInitials() {
-      let names = this.post.poster.split(" ");
+      let names = this.post.creator.split(" ");
       return names[0][0] + names[names.length - 1][0];
     },
   },
