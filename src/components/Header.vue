@@ -56,7 +56,7 @@ export default {
 .header-actions {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   column-gap: 2rem;
 
   .log-out {

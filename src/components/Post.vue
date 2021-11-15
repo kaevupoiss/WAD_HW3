@@ -31,7 +31,7 @@ export default {
   },
   components: { Avatar },
   computed: {
-    getInitials() {
+    getInitials: function () {
       let names = this.post.creator.split(" ");
       return names[0][0] + names[names.length - 1][0];
     },
@@ -97,6 +97,7 @@ export default {
   .material-icons {
     color: $blue300;
     cursor: pointer;
+    user-select: none;
 
     transition: 0.3s color ease;
 
