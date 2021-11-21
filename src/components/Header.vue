@@ -16,7 +16,9 @@
         to="/contact"
         >Contact Us</router-link
       >
-      <router-link class="log-out" :to="'/login'">Log Out</router-link>
+      <router-link class="log-out" :to="'/login'">{{
+        isDisabled ? "Log In" : "Log Out"
+      }}</router-link>
       <Avatar class="header-avatar" :initials="'RT'" :size="32" />
     </div>
   </div>

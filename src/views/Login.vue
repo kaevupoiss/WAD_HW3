@@ -48,7 +48,7 @@ export default {
   flex-direction: column;
 
   width: 100%;
-  //height: 100%;
+  height: 100%;
 
   background-color: $grey50;
 
@@ -59,8 +59,7 @@ export default {
 .login-card {
   display: flex;
   padding: 2rem;
-  margin: 20.38vh;
-  //margin: 9.95%;
+  margin: auto;
   width: 100%;
   max-width: 25rem;
   flex-direction: column;
