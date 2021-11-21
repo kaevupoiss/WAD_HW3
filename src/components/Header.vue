@@ -1,12 +1,21 @@
 <template>
   <div class="header">
-    <h1 class="logo" @click="$router.push({ name: 'Home' })">Sticky</h1>
+    <h1 class="logo" @click="!isDisabled && $router.push({ name: 'Home' })">
+      Sticky
+    </h1>
     <InputText
       class="search-input"
       v-model="searchText"
       :placeholder="'Search here'"
+      :is-disabled="isDisabled"
     />
     <div class="header-actions">
+      <router-link
+        class="contact-us"
+        :is="isDisabled ? 'label' : 'router-link'"
+        to="/contact"
+        >Contact Us</router-link
+      >
       <router-link class="log-out" :to="'/login'">Log Out</router-link>
       <Avatar class="header-avatar" :initials="'RT'" :size="32" />
     </div>
@@ -19,6 +28,9 @@ import InputText from "./InputText.vue";
 
 export default {
   name: "Header",
+  props: {
+    isDisabled: Boolean,
+  },
   components: { Avatar, InputText },
   data: function () {
     return {
@@ -34,7 +46,7 @@ export default {
   top: 0;
 
   display: grid;
-  grid-template-columns: 10rem 1fr 10rem;
+  grid-template-columns: 17rem 1fr 17rem;
   align-items: center;
   width: 100%;
   column-gap: 1.5rem;
@@ -59,7 +71,8 @@ export default {
   justify-content: flex-end;
   column-gap: 2rem;
 
-  .log-out {
+  .log-out,
+  .contact-us {
     text-decoration: none;
     color: $grey500;
     text-transform: uppercase;

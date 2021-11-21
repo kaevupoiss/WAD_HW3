@@ -1,5 +1,6 @@
 <template>
   <div class="login">
+    <Header :is-disabled="true" />
     <div class="login-card">
       <h1 class="logo">Sticky</h1>
       <InputText
@@ -14,13 +15,16 @@
       />
       <button class="button" @click="login()">Log in</button>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import InputText from "@/components/InputText.vue";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 export default {
-  components: { InputText },
+  components: { Footer, Header, InputText },
   name: "Login",
   data: function () {
     return {
@@ -41,9 +45,10 @@ export default {
 <style lang="scss">
 .login {
   display: flex;
+  flex-direction: column;
 
   width: 100%;
-  height: 100%;
+  //height: 100%;
 
   background-color: $grey50;
 
@@ -54,6 +59,8 @@ export default {
 .login-card {
   display: flex;
   padding: 2rem;
+  margin: 20.38vh;
+  //margin: 9.95%;
   width: 100%;
   max-width: 25rem;
   flex-direction: column;

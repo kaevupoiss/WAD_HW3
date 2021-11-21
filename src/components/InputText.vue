@@ -3,6 +3,7 @@
     <input
       class="input-text"
       type="text"
+      :disabled="isDisabled"
       :placeholder="placeholder"
       :value="value"
       @input="$emit('input', $event.target.value)"
@@ -16,6 +17,7 @@ export default {
   props: {
     value: String,
     placeholder: String,
+    isDisabled: Boolean,
   },
 };
 </script>
