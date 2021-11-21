@@ -5,7 +5,7 @@
       <Post v-for="(post, i) in posts" :key="'post' + i" :post="post" />
     </div>
     <div class="reset-likes">
-      <span class="material-icons"> heart_broken </span>
+      <span class="material-icons" @click="ResetLikes"> heart_broken </span>
     </div>
     <Footer />
   </div>
@@ -22,6 +22,13 @@ export default {
   computed: {
     posts: function () {
       return this.$store.state.posts;
+    },
+  },
+  methods: {
+    ResetLikes: function () {
+      this.$store.dispatch({
+        type: "ResetLikesAct",
+      });
     },
   },
 };
